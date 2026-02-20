@@ -1,0 +1,162 @@
+a {
+  color: #00B7FF;
+}
+
+/* Cabecera personalizada: verde estético con gradiente */
+.navbar-custom {
+  background: linear-gradient(90deg, var(--green-500) 0%, var(--green-600) 50%, var(--green-700) 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(22,160,133,0.12);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.navbar-custom .navbar-brand {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+.navbar-custom .nav-link {
+  color: rgba(255,255,255,0.92);
+}
+
+/* Ajustes responsivos menores */
+@media (max-width: 576px) {
+  body { padding: 0 24px 24px; }
+  .navbar-brand { font-size: 1.05rem; }
+}
+
+/* Paleta y estilos globales verdes */
+:root {
+  --green-050: #f6fffa;
+  --green-100: #e9f9f0;
+  --green-200: #c8f0dd;
+  --green-400: #48c78a;
+  --green-500: #2ecc71;
+  --green-600: #27ae60;
+  --green-700: #1e8f4f;
+  --green-800: #165f38;
+  --text-dark: #08392a;
+  --footer-height: 72px; /* altura aproximada del footer fijo */
+}
+
+/* Reset/top gap: cabecera pegada al top */
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  /* Reservar espacio al final para el footer fijo */
+  padding: 0 50px calc(50px + var(--footer-height)); /* arriba 0, laterales 50px, abajo = espacio + footer */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: linear-gradient(180deg, var(--green-050) 0%, var(--green-100) 100%);
+  color: var(--text-dark);
+}
+
+/* Links */
+a {
+  color: var(--green-600);
+}
+a:hover {
+  color: var(--green-700);
+}
+
+/* Botones primarios verdes */
+.btn-primary {
+  background-color: var(--green-600) !important;
+  border-color: var(--green-600) !important;
+  color: #fff !important;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--green-700) !important;
+  border-color: var(--green-700) !important;
+}
+
+/* Asegurar que .btn-success use la paleta verde del sitio */
+.btn-success {
+  background-color: var(--green-600) !important;
+  border-color: var(--green-600) !important;
+  color: #fff !important;
+}
+.btn-success:hover, .btn-success:focus {
+  background-color: var(--green-700) !important;
+  border-color: var(--green-700) !important;
+}
+
+/* Formularios */
+.form-control:focus {
+  border-color: var(--green-600);
+  box-shadow: 0 0 0 0.2rem rgba(39,174,96,0.12);
+}
+
+/* Tarjetas y listas */
+.card {
+  border: 1px solid rgba(22,160,133,0.06);
+  box-shadow: 0 6px 18px rgba(18, 120, 90, 0.04);
+  border-radius: 10px;
+}
+.list-group-item.active {
+  background-color: var(--green-600);
+  border-color: var(--green-600);
+}
+
+/* Encabezados */
+h1, h2, h3 {
+  color: var(--green-800);
+}
+
+/* Navbar tweaks */
+.navbar-custom {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.navbar-custom .navbar-brand {
+  color: #ffffff;
+}
+.navbar-custom .nav-link {
+  color: rgba(255,255,255,0.95);
+}
+.navbar-custom .nav-link:hover {
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+/* Pequeños ajustes responsivos */
+@media (max-width: 576px) {
+  body { padding: 0 18px 24px; }
+  .navbar-brand { font-size: 1.02rem; }
+}
+
+/* Footer: práctico y consistente con la estética verde */
+.site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--footer-height);
+  background: linear-gradient(180deg, var(--green-700), var(--green-800));
+  color: rgba(255,255,255,0.95);
+  z-index: 1030; /* por encima del contenido */
+}
+.site-footer .brand {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.site-footer .footer-link {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.site-footer .footer-link:hover {
+  color: #e6ffe9;
+  text-decoration: underline;
+}
+.site-footer .container { max-width: 1100px; height: 100%; }
+.site-footer .py-4 { height: 100%; }
+.site-footer small { color: rgba(255,255,255,0.8); }
+
+@media (max-width: 576px) {
+  .site-footer { text-align: center; }
+  .site-footer .col-md-6 { margin-bottom: 8px; }
+}
